@@ -18,5 +18,9 @@ class Settings():
         self.bullet_color = (230, 22, 22)
         self.bullets_allowed = 100
 
+        # Настройка пришельцев
+        self.alien_speed = 1.0
+           
+
 
 
