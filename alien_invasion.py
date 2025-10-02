@@ -89,7 +89,11 @@ class AlienInvasion:
         #Удаленние снарядов, вышедших за край экрана.
         for bullet in self.bullets.copy():
             if bullet.rect.bottom <= 0:
-                self.bullets.remove(bullet)    
+                self.bullets.remove(bullet)  
+
+        # Проверка попаданий пришельцев
+        # При обнаружении попадания удалтьб снаряд и пришельца
+        collisions = pygame.sprite.groupcollide(self.bullets, self.aliens, True, True)          
         
 
     def _update_aliens(self):
